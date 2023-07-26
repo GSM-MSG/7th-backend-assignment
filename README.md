@@ -23,9 +23,11 @@ MSG 7기 백엔드 과제 리퍼지토리입니다.
 추상클래스와 인터페이스 | ✅
 오버라이딩, 오버로딩 | ✅
 컬렉션즈 프레임워크 | ✅
-래퍼(Wrapper) 클래스 | ❌
-생성자, getter, setter |  ❌
-Optional 클래스 | ❌
+래퍼(Wrapper) 클래스 | ✅
+생성자, getter, setter |  ✅
+Optional 클래스 | ✅
+Exception, RuntimeException | ❌
+try catch, throws, throw | ❌
 
 <br>
 
