@@ -19,3 +19,23 @@
 * DNS 서버가 쿼리에 응답하는 속도는 서버와 상대적으로 사용자가 위치한 지리적 위치, 로드 밸런싱 구성 및 쿼리 필터링 등 여러 가지 변수에 따라 달라진다.
 
 * 사용자가 선택할 수 있는 또 다른 옵션은 DDI 솔루션이다. 이 솔루션은 모든 DNS, DHCP, IPAM 서비스를 통합하고 관리하는 중앙집중식 플랫폼이다.
+---
+## DNS 동작 방식
+
+![Alt text](image-4.png)
+
+1. 웹 브라우저에 www.naver.com을 입력하면 먼저 PC에 저장된 Local DNS에게 "www.naver.com"이라는 hostname에 대한 IP 주소를 요청한다.
+
+2. 그러면 Local DNS는 이제 "www.naver.com의 IP 주소"를 찾아내기 위해 다른 DNS 서버들과 통신을 시작한다.
+
+3. Root DNS서버는 "www.naver.com의 IP 주소"를 찾을 수 없어 Local DNS 서버에게 "www.naver.com의 IP 주소를 찾을 수 없다고 다른 DNS 서버에게 물어봐"라고 응답한다.
+
+4. 이제 Local DNS 서버는 com도메인을 관리하는 TLD DNS 서버에 다시 www.naver.com에 대한 IP 주소를 요청한다.
+
+5. com 도메인을 관리하는 DNS 서버에도 해당 정도가 없으면, Local DNS 서버에게 "www.naver.com의 IP 주소 찾을 수 없음. 다른 DNS 서버에게 물어봐"라고 응답한다.
+
+6. 이제 Local DNS 서버는 naver.com DNS 서버에게 다시 "www.naver.com의 IP 주소"를 요청한다.
+
+7. naver.com DNS 서버에는 "www.naver.com의 IP 주소"가 있으니깐 Local DNS 서버에게 "www.naver.com에 대한 IP주소는 222.122.195.6"라는 응답을 한다.
+
+8. 이를 수신한 Local DNS는 www.naver.com의 IP 주소를 캐싱하고 이후 다른 요청이 있을 시 응답할 수 있도록 IP 주소 정보를 단말에 전달해준다.
