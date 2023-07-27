@@ -16,7 +16,7 @@ MSG 7기 백엔드 과제 리퍼지토리입니다.
 ## Assginment
 
 
-### Java
+### Java & OOP
 주제 | 완료 |
 --|--
 클래스, 객체, 인스턴스 | ✅
@@ -26,8 +26,10 @@ MSG 7기 백엔드 과제 리퍼지토리입니다.
 래퍼(Wrapper) 클래스 | ✅
 생성자, getter, setter |  ✅
 Optional 클래스 | ✅
-Exception, RuntimeException | ❌
-try catch, throws, throw | ❌
+Exception, RuntimeException | ✅
+try catch, throws, throw | ✅
+객체지향의 4원칙 | ❌
+SOLID 원칙 | ❌
 
 <br>
 
@@ -50,10 +52,11 @@ Spring AOP | ❌
 주제 | 완료 |
 --|--
 CRUD란? | ✅
-URI, URL | ❌
-IP와 Port란 | ❌
+URI, URL | ✅
+IP와 Port란 | ✅
 DNS란 | ❌
 TCP, UDP | ❌
+TCP/IP | ❌
 HTTP | ❌
 API, REST API | ❌
 OSI 7 Layer | ❌
