@@ -6,7 +6,12 @@
 <br>
 
 # Exception, RuntimeException   
-   
+    
+* 오류와 예외
+   * 자바에서는 오류를 오류(Error)와 예외(Exception)으로 나눈다
+   * 오류는 시스템이 종료되어야 할 수준과 같이 수습할 수 없는 심각한 문제를 의미한다. 이는 개발자가 미리 예측하여 방지할 수없다
+   * 예외는 개발자가 구현한 로직에서 발생한 실수나 사용자의 영향에 의해 발생한다. 이는 개발자가 미리 예측하여 방지할 수 있기 때문에 상황에 맞는 예외 처리를 해야한다
+
 * 에러와 예외
    
     * 에러
@@ -52,3 +57,8 @@
                 at section7.NullPointerExceptionExample.main(NullPointerExceptionExample.java:6)
         ```
         -data라는 변수에 null값을 세팅을 했기 때문에 출력부분에서 data.toString()을 통해 해당 객체의 toString()값을 출력하고 싶었으나 해당 객체는 null이기 때문에 null에는 toString() 사용할 수 없기 때문에 NullPointerException 에러가 발생하는 것을 확인 할 수 있다
+
+## throwable class
+
+* throwable class란?
+   * 자바의 최상위 클래스인 Object 클래스를 제외하고 예외 클래스의 최상위 클래스는 Throwable 클래스이다 
