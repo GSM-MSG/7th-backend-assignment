@@ -60,3 +60,6 @@ TCP/IP | ❌
 HTTP | ❌
 API, REST API | ❌
 OSI 7 Layer | ❌
+운영체제란 | ❌
+프로세스와 스레드 | ❌
+교착 상태 | ❌
