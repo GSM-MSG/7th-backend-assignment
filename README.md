@@ -54,9 +54,9 @@ Spring AOP | ❌
 CRUD란? | ✅
 URI, URL | ✅
 IP와 Port란 | ✅
-DNS란 | ❌
-TCP, UDP | ❌
-TCP/IP | ❌
+DNS란 | ✅
+TCP, UDP | ✅
+TCP/IP | ✅
 HTTP | ❌
 API, REST API | ❌
 OSI 7 Layer | ❌
