@@ -73,7 +73,10 @@
 ### 인터페이스 살펴보기
 * 스프링 MVC의 큰 장접은 DispatcherServlet 코드릐 변경 없이 원하는 기능을 변경하거나 확장할 수 있다는 것이다
 * 동작에 필요한 대부분의 기능을 확장할 수 있도록 인터페이스로 제공한다 / 따라서 인터페이스들만 구현하여 DispatcherServlet에 등록하면 원하는 기능의 컨트롤러를 만들 수도 있다
-
+  
+### DispatcherServlet이란?
+* DispatcherServlet은 Spring Framework에서 중앙 진입점 역할로, HTTP 요청을 처리하는 프레임워크의 핵심 요소이다
+  
 ### 주요 인터페이스
 * 핸들러 매핑 : org.springframework.web.servlet.HandlerMapping
 * 핸들러 어댑터: org.springframework.web.servlet.HandlerAdapter
