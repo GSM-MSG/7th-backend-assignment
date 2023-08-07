@@ -28,7 +28,7 @@ MSG 7기 백엔드 과제 리퍼지토리입니다.
 Optional 클래스 | ✅
 Exception, RuntimeException | ✅
 try catch, throws, throw | ✅
-객체지향의 4원칙 | ❌
+객체지향의 4원칙 | ✅
 SOLID 원칙 | ❌
 
 <br>
@@ -36,7 +36,7 @@ SOLID 원칙 | ❌
 ### Spring
 주제 | 완료 |
 --|--
-Spring MVC | ❌
+Spring MVC | ✅
 DTO, DAO, VO, Entity | ❌
 Controller, Service, Repository | ❌
 Spirng Data JPA | ❌
@@ -57,8 +57,8 @@ IP와 Port란 | ✅
 DNS란 | ✅
 TCP, UDP | ✅
 TCP/IP | ✅
-HTTP | ❌
-API, REST API | ❌
+HTTP | ✅
+API, REST API | ✅
 OSI 7 Layer | ❌
 운영체제란 | ❌
 프로세스와 스레드 | ❌
