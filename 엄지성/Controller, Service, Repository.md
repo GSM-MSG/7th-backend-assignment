@@ -56,7 +56,7 @@ public class Controllerprac {
 ### 사용 예시
 ```java
 @Service
-public class BoardServiceImp implements BoardService
+public class BoardServiceImpl implements BoardService
 {
 	@Autowired
 	BoardRepositroy repo;
