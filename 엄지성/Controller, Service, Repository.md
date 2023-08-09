@@ -25,6 +25,22 @@ public class Controllerprac {
 }
 ```
 ---
+## RestController란
+
+* @Controller에 @ResponseBody가 더해진 것
+
+* Json 형태로 객체의 데이터를 반환하는 것
+
+### 사용 이유
+1. 간결한 코드
+    > 간단한 어노테이션 설정으로 웹 요청과 응답을 처리 할 수 있다.
+
+2. HTTP Method 지원
+    > 각각의 메서드에 HTTP Method를 지정해서 다양한 종류의 요청을 처리할 수 있다.
+
+3. RESTful 설계 원칙 준수
+    > RESTful 웹 서비스의 설계 원칙을 더 쉽게 준수할 수 있다.
+---
 ## Service란
 
 1. Client가 Request를 보낸다
@@ -36,6 +52,20 @@ public class Controllerprac {
 4. Service는 알맞은 정보를 가공하여 Controller에게 데이터를 넘긴다.
 
 5. Controller는 Service의 결과물을 Client에게 전달해준다.
+
+### 사용 예시
+```java
+@Service
+public class BoardServiceImp implements BoardService
+{
+	@Autowired
+	BoardRepositroy repo;
+	public List<BoardEntity> findAll()
+	{
+		return repo.findAll();
+	} 
+}
+```
 
 ## DAO란
 
