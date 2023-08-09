@@ -64,9 +64,27 @@
 * Service가 알맞은 정보를 가공하는 과정을 '비즈니스 로직을 수행한다'라고 한다
 * Service가 비즈니스 로직을 수행하고 데이터베이스에 접근하는 DAO를 이용해서 결과값을 받아온다
 
+* 예시코드
+```
+@Service // 1
+@RequiredArgsConstructor
+public class BoardService {
+    private final BoardRepository boardRepository; // 2
+
+        @Transactional
+        public BoardResponseDto createPost(BoardRequestsDto requestsDto) {
+            Board board = new Board(requedstsDto);
+            boardRepository.save(board); // 3
+            return newBoardResponseDto(board);
+        }
+}
+```
+* 1 : **@Service**는 Service로 지정해주는 어노테이션이다
+* 2 : Service와 인접한 계층은 Repository이므로, **BoardRepository** 객체를 통해 데이터를 데이터베이스에 저장하거나, 테이터베이스로부터 데이터를 가져온다 
+    * boardRepository 객체의 **save** 함수를 호출해 board 객체 데이터를 데이터베이스에 저장하도록 한다
 <br>
 
 ## Reposity란?
 
-* Entity에 의해 생성된 데이터베이스에 접근하는 메스드 들을 사용하기 위한 인터페이시이다
+* Entity에 의해 생성된 데이터베이스에 접근하는 메소드들을 사용하기 위한 인터페이시이다
 * @Entity라는 어노테이션으로 데이터베이스 구조를 만들었다면 여기에 CRUD를 해야하는데 이것을 어떻게 할 것인지 정의해주는 계층이라고 생각하면 편하다
