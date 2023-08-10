@@ -37,8 +37,8 @@ SOLID 원칙 | ❌
 주제 | 완료 |
 --|--
 Spring MVC | ✅
-DTO, DAO, VO, Entity | ❌
-Controller, Service, Repository | ❌
+DTO, DAO, VO, Entity | ✅
+Controller, Service, Repository | ✅
 Spirng Data JPA | ❌
 Lombok | ❌
 Spring URL Mapping | ❌
