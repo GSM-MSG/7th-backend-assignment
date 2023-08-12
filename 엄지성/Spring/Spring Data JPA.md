@@ -22,12 +22,43 @@
 
 1. Repository 인터페이스
     > 데이터 액세스 작업을 위한 메서드를 정의하는 인터페이스를 만들 수 있다. Spring Data JPA가 이것을 자동으로 구현해서 기본적인 데이터 조작을 처리한다.
+    ```java
+    import org.springframework.data.jpa.repository.JpaRepository;
+    import org.springframework.stereotype.Repository;
+
+    @Repository
+    public interface UserRepository extends JpaRepository<User, Long> {
+    }
+    ```
 
 2. 쿼리 메서드
     > 메서드 이름만으로 데이터를 조회하거나 조작할 수 있다.
+    ```java
+    import org.springframework.data.jpa.repository.JpaRepository;
+    import org.springframework.stereotype.Repository;
+
+    @Repository
+    public interface UserRepository extends JpaRepository<User, Long> {
+        List<User> findByLastName(String lastName);
+        List<User> findByAgeGreaterThan(int age);
+    }
+    ```
+
 
 3. 쿼리 생성
     > 복잡한 쿼리라도 "@Query"라는 어노테이션을 이용하여 직접 작성 할 수 있다.
+    ```java
+    import org.springframework.data.jpa.repository.JpaRepository;
+    import org.springframework.data.jpa.repository.Query;
+    import org.springframework.stereotype.Repository;
+
+    @Repository
+    public interface UserRepository extends JpaRepository<User, Long> {
+        @Query("SELECT u FROM User u WHERE u.age >= :minAge")
+        List<User> findUsersWithMinAge(@Param("minAge") int minAge);
+    }
+    ```
+
 
 ### 설치 방법
 

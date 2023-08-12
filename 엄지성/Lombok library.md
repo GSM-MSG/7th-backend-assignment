@@ -4,6 +4,18 @@
 
 * DTO, Model, Entity의 경우 여러 속성이 존재하고 이들이 가지는 프로퍼티에 대해 Getter,Setter 등을 매번 작성해야하는 경우를 자동으로 만들어주는 라이브러리
 
+### 작동 원리
+
+1. 자바 컴파일러는 소스파일을 파싱하여 AST트리를 만든다.
+
+2. Lombok은 Annotation Processor에 따라 AST트리를 동적으로 수정하고 새 노드를 추가하고 마지막으로 바이트 코드를 분석과 생성을 한다.
+    * Annotation Processor
+        > 자바 컴파일러 플러그인의 일종으로, 어노테이션에 대한 코드베이스를 검사, 수정, 생성하는 훅이다.
+
+3. 마지막으로 자바 컴파일러는 Lombok Annotation Processor에 의해 수정된 AST를 기반으로 바이트 코드를 생성한다.
+
+
+
 * Lombok library를 추가하면 
     ```java
     dependencies {
