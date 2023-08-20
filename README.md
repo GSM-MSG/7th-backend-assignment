@@ -39,8 +39,8 @@ SOLID 원칙 | ❌
 Spring MVC | ✅
 DTO, DAO, VO, Entity | ✅
 Controller, Service, Repository | ✅
-Spirng Data JPA | ❌
-Lombok | ❌
+Spirng Data JPA | ✅
+Lombok | ✅
 Spring URL Mapping | ❌
 Spring IoC, DI, Bean | ❌
 Spring AOP | ❌
